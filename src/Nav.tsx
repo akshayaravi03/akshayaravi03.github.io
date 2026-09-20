@@ -8,9 +8,12 @@ function Nav() {
   return (
     <nav
       style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
         width: '100%',
         boxSizing: 'border-box',
-        background: '#ffffff',
+        zIndex: 10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -27,7 +30,7 @@ function Nav() {
           fontSize: '1.75rem',
           letterSpacing: '0.08em',
           textTransform: 'uppercase',
-          color: '#111111',
+          color: '#f9f3f0',
           textDecoration: 'none',
         }}
       >
@@ -52,7 +55,7 @@ function Nav() {
                 fontWeight: 400,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#111111',
+                color: '#f9f3f0',
                 textDecoration: 'none',
               }}
             >
