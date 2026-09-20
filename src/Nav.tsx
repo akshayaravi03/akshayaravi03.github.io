@@ -26,7 +26,7 @@ function Nav() {
         href="/"
         style={{
           fontFamily: "'Newsreader', Georgia, serif",
-          fontWeight: 500,
+          fontWeight: 300,
           fontSize: '1.5rem',
           letterSpacing: '0',
           color: '#f9f3f0',
