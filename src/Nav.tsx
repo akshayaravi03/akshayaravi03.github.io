@@ -15,7 +15,7 @@ function Nav() {
         justifyContent: 'space-between',
         gap: '1rem',
         flexWrap: 'wrap',
-        padding: '1.5rem 2rem',
+        padding: '2rem 2rem 1rem',
         fontFamily: "'EB Garamond', Georgia, serif",
       }}
     >
@@ -23,8 +23,8 @@ function Nav() {
         href="/"
         style={{
           fontWeight: 400,
-          fontSize: '1.35rem',
-          letterSpacing: '0.02em',
+          fontSize: '2.75rem',
+          letterSpacing: '-0.01em',
           color: '#111111',
           textDecoration: 'none',
         }}
