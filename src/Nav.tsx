@@ -16,15 +16,15 @@ function Nav() {
         gap: '1rem',
         flexWrap: 'wrap',
         padding: '1.5rem 2rem',
-        fontFamily: "'Fraunces', Georgia, serif",
+        fontFamily: "'EB Garamond', Georgia, serif",
       }}
     >
       <a
         href="/"
         style={{
-          fontWeight: 700,
-          fontSize: '1.1rem',
-          letterSpacing: '0',
+          fontWeight: 400,
+          fontSize: '1.35rem',
+          letterSpacing: '0.02em',
           color: '#111111',
           textDecoration: 'none',
         }}
