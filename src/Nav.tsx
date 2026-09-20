@@ -16,7 +16,7 @@ function Nav() {
         gap: '1rem',
         flexWrap: 'wrap',
         padding: '1.5rem 2rem',
-        fontFamily: "'Satoshi', system-ui, sans-serif",
+        fontFamily: "'Fraunces', Georgia, serif",
       }}
     >
       <a
