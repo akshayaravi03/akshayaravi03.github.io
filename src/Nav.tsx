@@ -8,15 +8,18 @@ function Nav() {
   return (
     <nav
       style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
         width: '100%',
         boxSizing: 'border-box',
+        zIndex: 10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: '1rem',
         flexWrap: 'wrap',
-        padding: '2rem 2rem 1rem',
-        fontFamily: "'EB Garamond', Georgia, serif",
+        padding: '2rem 3rem',
       }}
     >
       <a
@@ -24,9 +27,10 @@ function Nav() {
         style={{
           fontFamily: "'Cormorant Garamond', Georgia, serif",
           fontWeight: 300,
-          fontSize: '2.75rem',
-          letterSpacing: '-0.01em',
-          color: '#111111',
+          fontSize: '1.75rem',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: '#f9f3f0',
           textDecoration: 'none',
         }}
       >
@@ -36,7 +40,7 @@ function Nav() {
         style={{
           listStyle: 'none',
           display: 'flex',
-          gap: '2rem',
+          gap: '2.25rem',
           margin: 0,
           padding: 0,
         }}
@@ -46,9 +50,12 @@ function Nav() {
             <a
               href={link.href}
               style={{
-                fontSize: 'calc(0.85rem + 1pt)',
-                letterSpacing: '0.03em',
-                color: '#111111',
+                fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                fontSize: '13px',
+                fontWeight: 400,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: '#f9f3f0',
                 textDecoration: 'none',
               }}
             >
