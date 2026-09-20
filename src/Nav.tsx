@@ -36,7 +36,7 @@ function Nav() {
         style={{
           fontFamily: "'Italiana', Georgia, serif",
           fontWeight: 400,
-          fontSize: 'calc(1.6rem + 1pt)',
+          fontSize: 'calc(1.6rem + 2pt)',
           letterSpacing: '0.02em',
           color: textColor,
           textDecoration: 'none',
