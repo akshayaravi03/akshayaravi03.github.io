@@ -23,9 +23,8 @@ function Nav() {
         href="/"
         style={{
           fontWeight: 700,
-          fontSize: '0.95rem',
-          letterSpacing: '0.06em',
-          textTransform: 'uppercase',
+          fontSize: '1.1rem',
+          letterSpacing: '0',
           color: '#111111',
           textDecoration: 'none',
         }}
