@@ -34,10 +34,10 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontFamily: "'Newsreader', Georgia, serif",
-          fontWeight: 300,
-          fontSize: '1.5rem',
-          letterSpacing: '0',
+          fontFamily: "'Italiana', Georgia, serif",
+          fontWeight: 400,
+          fontSize: '1.6rem',
+          letterSpacing: '0.02em',
           color: textColor,
           textDecoration: 'none',
           transition: 'color 1s ease',
