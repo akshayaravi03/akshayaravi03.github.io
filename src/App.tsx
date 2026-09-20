@@ -11,6 +11,7 @@ function App() {
         fontWeight: 500,
         letterSpacing: '0.02em',
         margin: 0,
+        color: 'red',
       }}
     >
       Akshaya Ravi Design Studio
