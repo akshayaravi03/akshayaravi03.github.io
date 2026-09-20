@@ -29,7 +29,6 @@ function Nav() {
           fontWeight: 300,
           fontSize: '1.75rem',
           letterSpacing: '0.08em',
-          textTransform: 'uppercase',
           color: '#f9f3f0',
           textDecoration: 'none',
         }}
