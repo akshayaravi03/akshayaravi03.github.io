@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const links = [
   { label: 'Projects', href: '#projects' },
   { label: 'About', href: '#about' },
@@ -5,8 +7,13 @@ const links = [
 ]
 
 function Nav() {
+  const [isHovered, setIsHovered] = useState(false)
+  const textColor = isHovered ? '#633b2f' : '#f9f3f0'
+
   return (
     <nav
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       style={{
         position: 'absolute',
         top: 0,
@@ -20,6 +27,8 @@ function Nav() {
         gap: '1rem',
         flexWrap: 'wrap',
         padding: '2rem 3rem',
+        background: isHovered ? '#f9f3f0' : 'transparent',
+        transition: 'background 1s ease',
       }}
     >
       <a
@@ -29,8 +38,9 @@ function Nav() {
           fontWeight: 300,
           fontSize: '1.5rem',
           letterSpacing: '0',
-          color: '#f9f3f0',
+          color: textColor,
           textDecoration: 'none',
+          transition: 'color 1s ease',
         }}
       >
         Akshaya Ravi
@@ -54,8 +64,9 @@ function Nav() {
                 fontWeight: 400,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#f9f3f0',
+                color: textColor,
                 textDecoration: 'none',
+                transition: 'color 1s ease',
               }}
             >
               {link.label}
