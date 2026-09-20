@@ -60,7 +60,7 @@ function Nav() {
               href={link.href}
               style={{
                 fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-                fontSize: '13px',
+                fontSize: 'calc(13px - 1pt)',
                 fontWeight: 400,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
