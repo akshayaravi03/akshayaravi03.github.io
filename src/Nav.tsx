@@ -25,10 +25,11 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontFamily: "'Cormorant Garamond', Georgia, serif",
-          fontWeight: 300,
-          fontSize: '1.75rem',
-          letterSpacing: '0.08em',
+          fontFamily: "'Prata', Georgia, serif",
+          fontWeight: 400,
+          fontSize: '1.6rem',
+          letterSpacing: '0.35em',
+          textTransform: 'uppercase',
           color: '#f9f3f0',
           textDecoration: 'none',
         }}
