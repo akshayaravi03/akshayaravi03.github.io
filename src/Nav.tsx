@@ -25,10 +25,10 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontFamily: "'Nunito', system-ui, sans-serif",
-          fontWeight: 800,
-          fontSize: '1.15rem',
-          letterSpacing: '0.01em',
+          fontFamily: "'Newsreader', Georgia, serif",
+          fontWeight: 500,
+          fontSize: '1.5rem',
+          letterSpacing: '0',
           color: '#f9f3f0',
           textDecoration: 'none',
         }}
