@@ -22,7 +22,8 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontWeight: 400,
+          fontFamily: "'Cormorant Garamond', Georgia, serif",
+          fontWeight: 300,
           fontSize: '2.75rem',
           letterSpacing: '-0.01em',
           color: '#111111',
@@ -45,7 +46,7 @@ function Nav() {
             <a
               href={link.href}
               style={{
-                fontSize: '0.85rem',
+                fontSize: 'calc(0.85rem + 1pt)',
                 letterSpacing: '0.03em',
                 color: '#111111',
                 textDecoration: 'none',
