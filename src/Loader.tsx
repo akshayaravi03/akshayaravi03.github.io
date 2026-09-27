@@ -53,8 +53,9 @@ function Loader() {
     >
       <span
         style={{
-          fontFamily: "'Italiana', Georgia, serif",
-          fontSize: '1.25rem',
+          fontFamily: 'Georgia, serif',
+          fontStyle: 'normal',
+          fontSize: 'calc(1.25rem + 2pt)',
           letterSpacing: '0.05em',
           color: '#f9f3f0',
         }}
