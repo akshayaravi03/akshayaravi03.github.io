@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+const DURATION_MS = 2000
+
 function Loader() {
   const [progress, setProgress] = useState(0)
   const [fadingOut, setFadingOut] = useState(false)
@@ -7,39 +9,28 @@ function Loader() {
 
   useEffect(() => {
     let cancelled = false
+    let frame: number
 
-    const trackImageLoad = async () => {
-      try {
-        const res = await fetch('/images/lobby.webp')
-        const total = Number(res.headers.get('content-length')) || 0
-        const reader = res.body?.getReader()
-        let received = 0
-        if (reader && total) {
-          for (;;) {
-            const { done, value } = await reader.read()
-            if (done) break
-            received += value.length
-            if (!cancelled) setProgress(Math.min(99, Math.round((received / total) * 100)))
-          }
-        }
-      } catch {
-        // ignore network errors, fall back to the minimum-delay below
+    const start = performance.now()
+    const tick = (now: number) => {
+      if (cancelled) return
+      const elapsed = now - start
+      const pct = Math.min(100, Math.round((elapsed / DURATION_MS) * 100))
+      setProgress(pct)
+      if (pct < 100) {
+        frame = requestAnimationFrame(tick)
+      } else {
+        setFadingOut(true)
+        setTimeout(() => {
+          if (!cancelled) setHidden(true)
+        }, 600)
       }
     }
-
-    const minimumDelay = new Promise((resolve) => setTimeout(resolve, 900))
-
-    Promise.all([trackImageLoad(), minimumDelay]).then(() => {
-      if (cancelled) return
-      setProgress(100)
-      setFadingOut(true)
-      setTimeout(() => {
-        if (!cancelled) setHidden(true)
-      }, 600)
-    })
+    frame = requestAnimationFrame(tick)
 
     return () => {
       cancelled = true
+      cancelAnimationFrame(frame)
     }
   }, [])
 
@@ -51,7 +42,7 @@ function Loader() {
         position: 'fixed',
         inset: 0,
         zIndex: 1000,
-        background: '#f9f3f0',
+        background: '#633b2f',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -65,7 +56,7 @@ function Loader() {
           fontFamily: "'Italiana', Georgia, serif",
           fontSize: '1.25rem',
           letterSpacing: '0.05em',
-          color: '#633b2f',
+          color: '#f9f3f0',
         }}
       >
         {progress}%
