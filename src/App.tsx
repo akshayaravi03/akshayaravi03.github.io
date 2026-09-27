@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
+import Loader from './Loader'
 import Nav from './Nav'
 
 function App() {
   return (
     <>
+      <Loader />
       <div
         style={{
           position: 'relative',
